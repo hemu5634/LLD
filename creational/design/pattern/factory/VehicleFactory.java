@@ -3,11 +3,15 @@ package creational.design.pattern.factory;
 public class VehicleFactory{
 
     public static Vehicle getVehicle(String vehicle){
-        if(vehicle.equals("Car"))
-            return new Car();
-        else if(vehicle.equals("Bike"))
-            return new Bike();
-        else if(vehicle.equals("Truck"))
-            return new Truck();
+        switch (vehicle) {
+            case "Car":
+                return new Car();
+            case "Bike":
+                return new Bike();
+            case "Truck":
+                return new Truck();
+            default:
+                throw new IllegalArgumentException("Unknown Argument Exception");
+        }
     }
 }

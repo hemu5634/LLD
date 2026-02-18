@@ -2,6 +2,9 @@ package creational.design.pattern.factory;
 
 public class VehicleFactory{
 
+    private VehicleFactory() {
+        throw new IllegalStateException("Utility class");
+    }
     public static Vehicle getVehicle(String vehicle){
         switch (vehicle) {
             case "Car":

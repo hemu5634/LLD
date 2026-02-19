@@ -25,6 +25,7 @@ public class RemoteController {
     public void pressOn(){
         turnOn.execute();
     }
+
     public void pressOff(){
         turnOff.execute();
     }

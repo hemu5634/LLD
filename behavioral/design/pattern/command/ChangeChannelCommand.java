@@ -12,4 +12,5 @@ public class ChangeChannelCommand implements Command {
     public void execute(){
         tv.changeChannel(channel);
     }
+
 }

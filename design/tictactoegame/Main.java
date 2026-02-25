@@ -1,8 +1,14 @@
 package design.tictactoegame;
 
 public class Main {
+    private static final int BOARD_SIZE = 3;
+
     public static void main(String[] args) {
-        Board tic = new TicTacToeBoard(3,3,"human","human");
-        tic.play();
+
+         PlayerStratergy playerX = new HumanPlayerStratergy("player X");
+         PlayerStratergy playerO = new ComputerPlayerStratergy("Computer O",BOARD_SIZE,BOARD_SIZE);
+
+        BoardGames game = new TicTacToeBoard(BOARD_SIZE, BOARD_SIZE, playerX, playerO);
+        game.play();
     }
 }

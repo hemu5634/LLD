@@ -1,5 +1,5 @@
 package design.tictactoegame;
 
 public enum Symbol {
-    X,O,Empty;
+    X,O,EMPTY;
 }
